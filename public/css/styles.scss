@@ -1,0 +1,287 @@
+$background: #f6f7fd;
+$color: #333359;
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header{
+  background-image: linear-gradient(45deg, rgba(15, 76, 117,.9), rgba(61, 213, 225, .9)), url(../images/smartphone-mockup-cw-rotated-lies-surface-isolated-white-background-lying-table-office-desk-new-modern-black-frameless-101077232.jpg);
+  height: 500px;
+  width: 100%;
+  padding: 20px 5%;
+  box-sizing: border-box;
+
+  nav{
+    height: 100px;
+    width: 100%;
+
+    .logo{
+      height: 90px;
+      width: 200px;
+      float: left;
+
+      .img{
+        background-image: url(../images/logo.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        float: left;
+        height: inherit;
+        width: 100px;
+      }
+
+      .text{
+        font-size: 45px;
+        color: #fff;
+        float: left;
+        margin-top: 10px;
+      }
+    }
+
+    .right{
+      height: 60px;
+      width: auto;
+      float: right;
+      margin-top: 25px;
+
+      a{
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bolder;
+        border-radius: 2px;
+      }
+
+      a:not(.login){
+        margin-right: 10px;
+      }
+      
+      a.login{
+        border: 1px solid #fff;
+      }
+      
+      a:hover{
+        background-color: #fff;
+        color: #3dd5e1;
+        transition: .2s ease-in;
+      }
+    }
+  }
+
+  .banner-container{
+    height: 200px;
+    width: 100%;
+
+    .left{
+      width: 50%;
+      height: inherit;
+      float: left;
+      margin-top: 50px;
+
+      .top-text{
+        color: #fff;
+        font-size: 30px;
+        font-family: 'Ubuntu', sans-serif;
+      }
+
+      p{
+        margin-top: 30px;
+        color: #fff;
+        font-size: 19px;
+        font-family: 'Ubuntu', sans-serif;
+      }
+
+      .store-links{
+        height: 50px;
+        width: 100%;
+        margin-top: 20px;
+
+        .img{
+          height: 30px;
+          width: auto;
+          margin-right: 10px;
+          float: left;
+        }
+      }
+    }
+
+    .right{
+      float: left;
+      height: inherit;
+      width: 50%;
+      padding: 20px 4%;
+      box-sizing: border-box;
+
+      .img {
+        background-image: url(../images/banner-devices.png);
+        height: 150px;
+        width: 60%;
+        float: right;
+        background-size: contain;
+        padding-top: 30%;
+        float: right;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+
+section.features{
+  background: $background;
+  height: 600px;
+  width: 100%;
+  padding: 40px 7%;
+  box-sizing: border-box;
+
+  .feature-head{
+    color: $color;
+    text-align: center;
+    font-size: 29px;
+    font-family: 'Ubuntu', sans-serif;
+  }
+
+  .row{
+    height: 150px;
+    width: 100%;
+    margin-top: 30px;
+
+    .col{
+      float: left;
+      width: 47%;
+      height:inherit;
+      background: #fff;
+      padding: 20px 3%;
+      box-sizing: border-box;
+      border-radius: 5px;
+      box-shadow: 0px 6px 35px 0px rgba(0,0,0,0.1);
+
+      .icon{
+        height: 35px;
+        width: 35px;
+        float: left;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      @for $i from 1 through 4{
+        .icon_#{$i}{
+          background-image: url(../images/icon_#{$i}.png);
+        }
+      }
+
+      .text{
+        float: right;
+        width: 85%;
+        height: inherit;
+
+        .text-header{
+          font-family: 'Ubuntu', sans-serif;
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+
+        .real-text{
+          font-family: 'Ubuntu', sans-serif;
+          font-size: 17px;
+        }
+      }
+    }
+    .col:nth-child(2){
+      float: right;
+    }
+  }
+}
+
+section.login_form{
+  height: 100vh;
+  width: 100%;
+  background: $color;
+  padding: 60px 0;
+  box-sizing: border-box;
+
+  form.register{
+    height: 450px;
+  }
+  form{
+    height: 410px;
+    width: 300px;
+    background: #fff;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 20px 0;
+    box-sizing: border-box;
+
+    a.linkers{
+      text-decoration: none;
+      font-size: 13px;
+      text-align: center;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .logo{
+      height: 90px;
+      width: 150px;
+      margin: 0 auto;
+
+      .img{
+        background-image: url(../images/logo.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        float: left;
+        height: 60px;
+        width: 70px;
+      }
+
+      .text{
+        font-size: 35px;
+        color: $color;
+        float: left;
+        margin-top: 10px;
+      }
+    }
+
+    h3{
+      color: #333359;
+      text-align: center;
+      font-size: 29px;
+      font-family: 'Ubuntu', sans-serif;
+      font-weight: lighter;
+      margin-bottom: 20px;
+    }
+
+    .input-container{
+      height: 40px;
+      width: 90%;
+      margin: 0 auto;
+      margin-bottom: 20px;
+
+      input{
+        height: inherit;
+        width: 100%;
+        padding: 5px 8px;
+        box-sizing: border-box;
+        border-radius: 4px;
+        box-shadow: none;
+        border: 1px solid #ccc;
+      }
+
+      input[type=submit]{
+        background: $color;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      input[type=submit]:hover{
+        background: transparent;
+        color: $color;
+        transition: .2s ease-in-out;
+        font-weight: bolder;
+        border: 1px solid $color;
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IDS System | Hospital Login</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <section class="login_form">
+        <form action="/hospital/login" method="post">
+            <div class="logo">
+                <div class="img"></div>
+                <div class="text">IDS</div>
+            </div>
+
+            <h3>Hospital Login</h3>
+
+  	        <% if(locals.message){ %>
+  	            <p style="text-align:center;color:green;font-size: 15px;text-align: center;"><%=message.success%></p>
+  	        <% } %>
+  	        <% if(locals.message){ %>
+  	            <p style="text-align:center;color:red;font-size: 15px;text-align: center;"><%=message.failure%></p>
+  	        <% } %>
+  	        <% if(error_message != ""){ %>
+  	            <p style="text-align:center;color:red;font-size: 15px;text-align: center;"><%=error_message%></p>
+  	        <% } %>
+
+            <div class="input-container">
+              <input value="<%= email != null && email != '' ? email : '' %>" name="email" type="text" placeholder="Email Address">
+            </div>
+            <div class="input-container">
+              <input type="password" name="password" placeholder="Password">
+            </div>
+            <div class="input-container"><input type="submit" value="Proceed To Login"></div>
+
+            <a href="" class="linkers">Forgot Password? Get a new one</a>
+            <a href="/hospital/register" class="linkers">Create Your Hospital Account</a>
+        </form>
+
+    </section>
+</body>
+</html>
