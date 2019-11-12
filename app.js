@@ -35,7 +35,8 @@ mongoose.connect(process.env.DATABASE_URL, {
 const db = mongoose.connection
 db.on("error",error => console.log("Error Connecting" + error))
 db.on("open", () => console.log("Connected"))
-
+//password: mighty_tech_4_ever
+//username: 2mighty
 mongoose.set('useNewUrlParser', true)
 mongoose.set('useFindAndModify', false)
 mongoose.set('useCreateIndex', true)
